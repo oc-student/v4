@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+/*
+	CIS 155 - Web Development I
+	Project V4: Silverdale Business Complex & Storage Center
+
+	Author: Chris Wilfert
+	Date: xx Mar 2019
+
+	Filename: styles.css
+	
+	Summary: This file contains CSS content for the entire site.
+*/
+
+/*
+	The following line imports the styles-reset.css file into the styles.css file, this was used to prevent having
+	to link the styles-rest.css file into every .html file used for the site.
+*/
+
+@import url(styles-reset.css);
+
+/* 
+	This section will provide the basic formatting for structural elements of the site.
+*/
+
+/*
+	  blue_background.jpg attribution - https://www.solidbackgrounds.com/blue-stained-glass-free-website-background-image.html
+*/
+
+body {
+	background-image: url(media/blue_background.jpg);
+	width: 95%;
+}
+
+header {
+	display: block;
+	padding: 20px 20px 10px 20px;
+	text-align: center;
+}
+
+header#index {
+	background: radial-gradient(ellipse closest-side at center, white, blue);
+}
+
+header#index h1 {
+	font-size: 60px;
+	text-shadow: black -8px 4px 4px;
+}
+
+header#index {
+	border-radius: 40px;
+	box-shadow: white 4px 4px 40px,
+				white -4px -4px 40px;
+}
+
+body > header > img {
+	border-radius: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 88%;
+	opacity: 0.85;
+}
+
+section#top_l {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+section#top_l img {
+	display: block;
+	float: left;
+	width: 100%;
+	border-radius: 20px 80px;
+}
+
+section#top_l figcaption {
+	float: left;
+	text-align: center;
+	font-size: 20px;
+}
+
+section#top_r {
+	display: block;
+	float: left;
+	width: 50%;	
+	text-align: center;
+	padding-left: 20px;
+}
+
+/*
+	• M8LO10 Demonstrate a CSS animation or transition (CSS, identify which is being done and its impact on the rendered HTML)
+	- The section below uses a transition to fade the four images on the main index page to .5 opacity over 5 seconds.
+*/
+
+section#top_r img {
+	display: block;
+	float: left;
+	width: 15%;
+	border-radius: 10px;
+	transform: skewX(10deg);
+	opacity: .5;
+	transition: opacity 5s ease;	
+}
+
+section#top_r p {
+	font-size: 15px;
+	text-align: left;
+}
+
+section#middle {
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+section#middle h1 {
+	font-size: 40px;
+	color: yellow;
+}
+
+section#middle p {
+	font-size: 30px;
+	text-align: left;
+}
+
+section#middle ul {
+	font-size: 20px;
+	text-align: left;
+	padding-left: 30px;
+}
+
+section#bottom h1 {
+	font-size: 40px;
+	color: yellow;
+	text-align: center;
+}
+
+section#future img {
+	display: block;
+	float: left;
+	border-radius: 100px;
+}
+
+section#future img#f1 {
+	position: relative;
+	top: 0px;
+	left: 25px;
+	width: 33%;
+}
+
+section#future img#f2 {
+	position: absolute;
+	top: 700px;
+	right: 150px;
+	width: 15%;
+}
+
+section#future img#f3 {
+	position: fixed;
+	top: 500px;
+	left: 800px;
+	width: 28%;
+}
+
+section#bottom blockquote {
+	display: grid;
+	grid-template-rows: 10% 10% 10% 10% 10% 10%;
+	grid-template-columns: 50% 15%;
+	grid-row-gap: 50px;
+	grid-column-gap: 25px;
+	grid-row-start: 1;
+	grid-row-end: 6;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	padding-left: 40px;
+	justify-content: center;
+	height: 200px;
+	width: 80%;
+}
+
+table {
+	margin: 0 auto;
+}
+
+footer {
+	display: block;
+	clear: both;
+	text-align: center;
+	padding: 100px 5px 0px 5px;
+}
+
+/* 
+	This section will provide the basic formatting for any navigation elements of the site.
+*/
+
+nav.nav-main a, nav.nav-sub a {
+	background-color: grey;
+	border: 1px outset black;
+	border-radius: 20px;
+	padding: 2px 2px 2px 2px;
+}
+
+nav.nav-main a:hover, nav.nav-sub a:hover {
+		background-color: green;
+}
+	
+nav.nav-main ul li a, nav.nav-sub ul li a {
+	display: block;
+	color: white;
+	font-style: normal;
+	text-decoration: none;
+}
+
+nav.nav-main li {
+	display: block;
+	width: 16.5%;
+	float: left;
+}
+
+nav.nav-sub li {
+	display: block;
+	width: 25%;
+	float: left;
+}
+
+/*
+	This section is for formatting of mobile phones 0px to 480px.
+*/
+
+/*
+	This section is for formatting a pull down menu for the Self Stoage page.
+*/
+
+@media only screen and (max-width: 480px) {
+		
+	/*
+		This section is for defining and formatting flexbox layouts only for mobile devices.
+	*/
+
+	body {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+
+	header, footer {
+		width: 100%;
+	}
+	
+	nav.mobile ul li a {
+		color: red;
+		font-style: normal;
+		text-decoration: none;		
+		background-color: white;
+		border: 3px outset black;
+		border-radius: 10px;
+		padding: 1px 30px 1px 30px;
+	}
+
+	ul.submenu-pd {
+		display: none;
+	}
+
+	a.subtitle-pd:hover+ul.submenu-pd, ul.submenu-pd:hover {
+		display: block;
+	}
+	
+	section#flex article {
+		-webkit-flex: 1 2 100px;
+		flex: 1 2 100px;
+	}	
+}
+
+@media only screen and (min-width: 481px) {
+
+	nav.mobile a {
+		background-color: grey;
+		border: 1px outset black;
+		border-radius: 20px;
+		padding: 2px 2px 2px 2px;		
+	}
+
+	nav.mobile a:hover {
+			background-color: green;
+	}
+		
+	nav.mobile ul li a {
+		display: block;
+		color: white;
+		font-style: normal;
+		text-decoration: none;
+	}
+
+	nav.mobile li {
+		display: block;
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	section#flex article {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		height: 40%;
+		width: 40%;
+	}
+}
+
+/*
+	This section will proivde the basic formatting for the unitsize table on the Self Storage page.
+*/
+
+table.unitsize {
+	color: black;
+	border-collapse: collapse;
+	font-size: 1.1em;
+	width: 90%;
+}
+
+table.unitsize caption {
+	color: white;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+table.unitsize td, table.unitsize th {
+	text-align: center;
+	border: 2px solid gray;
+}
+
+table.unitsize thead tr {
+	background: lightgray;
+	font-size: 1.7em;
+}
+
+table.unitsize tbody tr {
+	background: white;
+	height: 45px;
+}
+
+table.unitsize tfoot tr {
+	background: yellow;
+	font-size: 1.3em;
+}
+
+/* 
+	This section will provide the basic formatting for the forms on the Customer Login page.
+	• M7LO11 Demonstrate how to format a form with CSS (group your form styles together in your CSS file, and document their overall impact on the form)
+	- The following section sets the form elements as flex boxes, text color, background color and styles.
+*/
+
+div.custForm {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: 10px;
+}
+
+form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 88%;
+	padding: 40px 20px 40px 20px;		
+}
+
+form > fieldset {
+	border-radius: 40px;
+	background-color: lightgray;
+	padding: 20px 20px 20px 20px;
+}
+
+form#customer {
+	color: black;
+	background-color: bisque;
+}
+
+form#unit {
+	color: black;
+	background-color: ivory;
+}
+
+textarea {
+	height: 100px;
+	width: 500px;
+}

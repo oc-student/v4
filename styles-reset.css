@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/*
+	CIS 155 - Web Development I
+	Project V4: Silverdale Business Complex & Storage Center
+
+	Author: Chris Wilfert
+	Date: xx Mar 2019
+
+	Filename: styles-reset.css
+	
+	Summary: This file contains CSS reset content for the entire site.
+*/
+
+/* 
+	This section will provide the reset styles for layout of the entire site.
+*/
+
+body, header, h1, h2, h3, nav, ol, ul, li, footer, address, section, article, figure, figcaption {
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+	padding: 0px;
+	width: 100%;	
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+nav > ul {
+	list-style: none;
+	text-decoration: none;
+}
+
+a[href] {
+	color: yellow;
+	font-style: italic;
+	font-weight: bold;
+}

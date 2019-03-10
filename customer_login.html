@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+
+<!--
+	CIS 155 - Web Development I
+	Project V4: Silverdale Business Complex & Storage Center
+
+	Author: Chris Wilfert
+	Date: xx Mar 2019
+
+	Filename: customer_login.html
+	
+	Summary: This file is specifically for the customer login link from the main (index.html) page.
+-->
+
+	<title>Silverdale Storage Complex - Login</title>
+	<link href="styles.css" rel="stylesheet"/>
+	
+</head>
+
+<body>
+
+	<header id="index">
+		<h1>Silverdale Business Complex & Storage Center</h1>
+		<h1>Customer Login</h1>
+		<nav class="nav-main">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="self_storage.html">Self Storage</a></li>
+				<li><a href="future.html">RV Storage</a></li>
+				<li><a href="future.html">Wine Storage</a></li>
+				<li><a href="future.html">Business Space</a></li>
+			</ul>
+		</nav>
+	</header>
+	<br/>
+	<br/>
+	<form id="customer">
+		<fieldset id="customer_info">
+			<legend>Required Customer Record Information</legend>
+			<div class="custForm">
+
+			<!--
+				◦ M7LO5 Demonstrate the use of a text box in a form
+				- The first set of fields for this form utilize a text box for input.
+			-->
+
+				<label>
+					Name
+					<input name="cName" id="name" type="text" placeholder="First and Last Name"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Address
+					<input name="cAddress" id="address" type="text" placeholder="Street Address"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					City
+					<input name="cCity" id="city" type="text" placeholder="City"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					State
+					<input name="cState" id="state" type="text" placeholder="State"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Zip Code
+					<input name="cZip" id="zip" type="text" placeholder="Zip Code"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Contact Number
+					<input name="cPhone" id="phone" type="tel" placeholder="000-000-0000"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					eMail Address
+					<input name="cEmail" id="email" type="email" placeholder="eMail"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Select A User Name
+					<input name="uName" id="cUname" type="text" placeholder="User Name"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Enter A Password
+					<input name="cPassword1" id="pwd1" type="password" placeholder="Password"/>
+				</label>
+			</div>
+			<div class="custForm">
+				<label>
+					Re-Enter Your Password
+					<input name="cPassword2" id="pwd2" type="password" placeholder="Password"/>
+				</label>
+			</div>
+			
+			<!--
+				◦ M7LO9 Demonstrate the use of a text area in a form
+				- The customer comments field uses a text area box for customers to enter comments.
+			-->
+			
+			<div class="custForm">
+				<label>
+					Customer Comments
+					<textarea name="cComments" id="cmts" placeholder="If you have any comments enter them here."></textarea>
+				</label>
+			</div>			
+		</fieldset>
+	</form>
+	<br/>
+	<br/>
+	<form id="unit">
+		<fieldset id="customer_unit">
+			<legend>Customer Unit Selection</legend>
+			<div class="custForm">
+
+			<!--
+				◦ M7LO8 Demonstrate the use of a selection list in a form
+				- The unit size field allows the customer to choose from a selection list of unit sizes.
+			-->	
+
+				<label for="units">Unit Size</label>
+					<select name="cUnit" id="units">
+						<option value="unitsize">5x5</option>
+						<option value="unitsize">5x8</option>
+						<option value="unitsize">5x9</option>
+						<option value="unitsize">5x10</option>
+						<option value="unitsize">10x8</option>
+						<option value="unitsize">9x10</option>
+						<option value="unitsize">10x10</option>
+						<option value="unitsize">10x12</option>
+						<option value="unitsize">10x15</option>
+						<option value="unitsize">10x24</option>
+						<option value="unitsize">15x20</option>
+						<option value="unitsize">11x34</option>
+						<option value="unitsize">10x39</option>
+					</select>
+			</div>
+			<div class="custForm">
+
+			<!--
+				◦ M7LO6 Demonstrate the use of check boxes in a form
+				- The unit options field uses check boxes to allow customers to selection available options.
+			-->				
+			
+				<label>Select Unit Options</label>
+				<fieldset id="group1">
+					<label>Indoor</label>
+					<input name="uOptions" value="indoor" type="checkbox"/>
+					<label>Ground Floor</label>
+					<input name="uOptions" value="gfloor" type="checkbox"/>
+					<label>Drive Up</label>
+					<input name="uOptions" value="drive" type="checkbox"/>
+					<label>Security Alarm</label>
+					<input name="uOptions" value="alarm" type="checkbox"/>
+				</fieldset>
+			</div>
+			<div class="custForm">
+			
+			<!--
+				◦ M7LO7 Demonstrate the use of radio buttons in a form
+				- The payment options field uses radio buttons for customer selection.
+			-->	
+			
+				<label>Select Payment Option</label>
+				<fieldset id="group2">
+					<label>Monthly</label>
+					<input name="uOptions" value="month" type="radio"/>
+					<label>Semi-Annual</label>
+					<input name="uOptions" value="semia" type="radio"/>
+					<label>Yearly</label>
+					<input name="uOptions" value="yearly" type="radio"/>
+				</fieldset>
+			</div>
+		</fieldset>
+	</form>
+	
+
+
+	<footer>
+		<address>
+			Silverdale Business Complex & Storage Center &#8224; 1234 Greaves Way, Silverdale WA &nbsp; 98383 &#8224; 360-555-4870
+		</address>
+		<h2>&#171; &nbsp; Silverdale Business Complex & Storage Center is a fictious business project site for <a href="https://www.olympic.edu/courses/web-development-i" target="_blank">
+		    Olympic College CIS 155 - Web Development I</a> &nbsp; &#187;</h2>
+	</footer>
+
+</body>
+
+</html>
